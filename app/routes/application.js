@@ -7,5 +7,14 @@ export default Route.extend({
   @action didTransition() {
     window.r = this;
     window.c = config
-  }
+  },
+  @action submit(loginId, loginPassword) {
+    let i = loginId;
+    let j = loginPassword;
+    debugger;
+  },
+  @action signUp(newName, newEmail, newPassword, reEnterPassword) {
+
+    debugger;
+  },
 });

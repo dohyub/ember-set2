@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('signup');
+  this.route('signin');
+  this.route('manage-flex-orders');
 });
 
 export default Router;
