@@ -1,4 +1,4 @@
-<div class="uk-container">
+<!-- <div class="uk-container">
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
       <div class="uk-offcanvas-content">
@@ -125,4 +125,132 @@
       </li>
     </ul>
   </div>
+</div> -->
+
+<div class="uk-container">
+  <div uk-grid>
+    <div class="uk-width-2-3@m">
+      <nav class="uk-navbar uk-navbar-container uk-margin">
+        <div class="uk-navbar-left">
+          <div class="uk-offcanvas-content">
+            <a class="uk-navbar-toggle" href="#" uk-toggle="target: #offcanvas-nav-primary">
+              <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+            </a>
+          </div>
+          <ul class="uk-navbar-nav">
+            <li>
+              <a href="#">신규 주문<span class="uk-badge">({{model.[1].local}})</span></a>
+            </li>
+            <li>
+              <a href="#">주문 처리중<span class="uk-badge">({{model.[0].local}})</span></a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="#">주문 수락 대기</a></li>
+                  <li><a href="#">주문 완료</a></li>
+                  <li><a href="#">번들 대기</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">주문 처리 완료<span class="uk-badge">({{model.[2].local}})</span></a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="#">주문 취소 완료</a></li>
+                  <li><a href="#">주문 수취 완료</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <form class="uk-search uk-search-default">
+            <span uk-search-icon></span>
+            <input class="uk-search-input uk-width-1-1" type="search" placeholder="Search...">
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="uk-overflow-auto uk-table-middle">
+    <table class="uk-table uk-table-striped">
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Reception Date</th>
+            <th>Confirm Date</th>
+            <th>Order Number</th>
+            <th>ASIN(Product ID)</th>
+            <th>Local Tracking Number(Link)</th>
+            <th>International Tracking Number</th>
+            <th>Customer Response</th>
+            <th>Detail View</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#each model as |rental|}}
+            <tr>
+                <td>{{rental.state}}</td>
+                <td>{{rental.reception}}</td>
+                <td>{{rental.confirm}}</td>
+                <td>{{rental.order}}</td>
+                <td>{{rental.code}}</td>
+                <td>{{rental.local}}</td>
+                <td>{{rental.international}}</td>
+                <td>{{rental.customer}}</td>
+                <td><button class="uk-button uk-button-text" {{action 'detail' rental}}>상세보기</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <ul class="uk-pagination uk-flex-right" uk-margin>
+        <li><a href="#"><span uk-pagination-previous></span></a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#"><span uk-pagination-next></span></a></li>
+    </ul>
+    {{#if viewbibi}}
+        <table class="uk-table uk-table-divider">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Reception Date</th>
+                    <th>Confirm Date</th>
+                    <th>Order Number</th>
+                    <th>ASIN(Product ID)</th>
+                    <th>Local Tracking Number(Link)</th>
+                    <th>International Tracking Number</th>
+                    <th>Customer Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{rental.state}}</td>
+                    <td>{{rental.reception}}</td>
+                    <td>{{rental.confirm}}</td>
+                    <td>{{rental.order}}</td>
+                    <td>{{rental.code}}</td>
+                    <td>{{rental.local}}</td>
+                    <td>{{rental.international}}</td>
+                    <td>{{rental.customer}}</td>
+                </tr>
+            </tbody>
+        </table>
+    {{/if}}
+  </div>
+</div>
+
+<div id="offcanvas-nav-primary" uk-offcanvas="mode: none; overlay: false">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical uk-nav-parent-icon" uk-nav>
+            <li class="uk-active"><a href="#">주문 내역 확인</a></li>
+            <li class="uk-parent">
+                <a href="#">고객 관리</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="#">고객 주문 관리</a></li>
+                    <li><a href="#">고객 CS 관리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
