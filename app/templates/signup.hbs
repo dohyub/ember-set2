@@ -32,7 +32,13 @@
         </div>
       </div>
       <div class="uk-margin uk-text-center">
-        <button class="uk-button uk-button-default uk-width-1-1">CREATE 9PLE ACCOUNT</button>
+        {{#unless visible}}
+          <button class="uk-button uk-button-default uk-width-1-1">CREATE 9PLE ACCOUNT</button>
+        {{else}}
+          <button class="uk-button uk-button-default uk-width-1-1" disabled>
+            <div uk-spinner></div>
+          </button>
+        {{/unless}}
       </div>
       <hr class="uk-divider-icon">
       <div class="uk-margin">

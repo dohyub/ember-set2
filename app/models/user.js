@@ -18,6 +18,7 @@ export default DS.Model.extend({
   online: DS.attr('boolean'),
 
   // domain specific
+  requests: DS.hasMany('request'),
   name: DS.attr('string'),
-  posts: DS.hasMany()
+  posts: DS.hasMany('post')
 });

@@ -8,126 +8,13 @@ export default Route.extend({
     window.r = this;
     window.c = config
   },
-  @action submit(loginId, loginPassword) {
-    let i = loginId;
-    let j = loginPassword;
-    debugger;
+  @action modelTest() {
+    console.log('test');
   },
-  @action signUp(newName, newEmail, newPassword, reEnterPassword) {
-
-    debugger;
+  beforeModel() {
+    return this.get('session.prefetch');
   },
   model() {
-    return [{
-      state: 'grand-old-mansion',
-      reception: 'Gsdfsf',
-      confirm: 'V345435',
-      order: 'San Francisco',
-      code: 'Estate',
-      local: 3,
-      international: 'https://upload.wikimedia.org/',
-      customer: 'This grand old mansion sits',
-      detail: 'sdfsdf'      
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Grand Old Mansion',
-      confirm: 'Veruca Salt',
-      order: 'San Francisco',
-      code: 'Estate',
-      local: 16,
-      international: 'https://upload.wikimedia.org/',
-      customer: 'This grand old mansion sits',
-      detail: 'sdfsdf'   
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 0,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 1,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 20,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 30,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 40,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 50,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 60,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 70,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }, {
-      state: 'grand-old-mansion',
-      reception: 'Gra4tansion',
-      confirm: 'Veruca Salt',
-      order: 'Sanrdtgo',
-      code: 'Estate',
-      local: 80,
-      international: 'https:/4tedia.org/',
-      customer: 'This gran234 sits',
-      detail: 'sdhkmgjkhf' 
-    }];
+    return this.store.findAll('request');
   }
 });
