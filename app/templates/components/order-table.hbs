@@ -1,0 +1,37 @@
+<div class="uk-overflow-auto uk-table-middle uk-height-large">
+  <table class="uk-table uk-table-small uk-table-striped uk-table-hover uk-table-condensed uk-text-small">
+    <thead>
+      <tr>
+        <th>담장자</th>
+        <th>주문상태</th>
+        <th>주문요청시간</th>
+        <th>주문접수시간</th>
+        <th>주문번호(9ple)</th>
+        <th>주문금액</th>
+        <th>국제배송비</th>
+        <th>전체금액</th>
+        <th>고객응답</th>
+        <th>Customer Service</th>
+        <th>세부사항</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |rental|}}
+        <tr>
+          <td>{{rental.manager}}</td>
+          <td>{{rental.status}}</td>
+          <td>{{rental.receptionDate}}</td>
+          <td>{{rental.confirmDate}}</td>
+          <td>{{rental.orderNumber}}</td>
+          <td>${{rental.purchaseTotal}}</td>
+          <td>{{rental.internationalShippingFee}}</td>
+          <td>{{rental.totalCharge}}</td>
+          <td>{{rental.customerResponse}}</td>
+          <td><a class="uk-button uk-button-text" href="#modal-overflow" uk-toggle>C.S</a></td>
+          <td><button class="uk-button uk-button-text" {{action (route-action 'detail' model)}}>상세보기</button></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+{{massege-modal}}

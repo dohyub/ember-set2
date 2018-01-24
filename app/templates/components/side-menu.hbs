@@ -1,0 +1,22 @@
+<div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+  <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical uk-nav-parent-icon" uk-nav>
+      <li class="uk-active"><a href="#">주문 내역 확인</a></li>
+      <li class="uk-parent">
+        <a href="#">고객 관리</a>
+        <ul class="uk-nav-sub">
+          <li><a href="#">고객 주문 관리</a></li>
+          <li><a href="#">고객 CS 관리</a></li>
+        </ul>
+      </li>
+      <li class="uk-nav-divider"></li>
+      <li {{action (route-action 'logout')}}>
+        <a href="#">
+          <span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>
+          로그아웃
+        </a>
+      </li>
+    </ul>
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+  </div>
+</div>

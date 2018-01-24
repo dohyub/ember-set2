@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import autoComputed from '@ember-decorators/auto-computed';
 
 export default DS.Model.extend({
   // firebase session service specific

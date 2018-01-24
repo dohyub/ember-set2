@@ -1,0 +1,48 @@
+<div class="uk-container-expand">
+  <div uk-grid>
+    <div class="uk-width-1-5@m">
+      <h4 class="uk-heading-line uk-text-center"><span>Orders</span></h4>
+      <div class="uk-overflow-auto uk-height-max-large uk-box-shadow-xlarge">
+        <table class="uk-table uk-table-hover uk-table-striped uk-table-divider uk-text-left">
+          <thead>
+            <tr>
+              <th>Order Date</th>
+              <th>Order Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr {{action 'orderDetail'}}>
+              <td>Table Data</td>
+              <td>Table Data</td>
+            </tr>
+            <tr>
+              <td>Table Data</td>
+              <td>Table Data</td>
+            </tr>
+            <tr>
+              <td>Table Data</td>
+              <td>Table Data</td>
+            </tr>
+            <tr>
+              <td>Table Data</td>
+              <td>Table Data</td>
+            </tr>
+            <tr>
+              <td>Table Data</td>
+              <td>Table Data</td>
+            </tr>
+            <tr>
+              <td>Table Data</td>
+              <td>Table Data</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="uk-width-auto@m uk-text-small uk-table-small">
+      {{#if viewDetail}}
+        {{order-detail}}
+      {{/if}}
+    </div>
+  </div>
+</div>

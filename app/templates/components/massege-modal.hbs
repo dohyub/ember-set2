@@ -1,0 +1,68 @@
+<div id="modal-overflow" uk-modal>
+    <div class="uk-modal-dialog">
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">9ple Customer Service</h2>
+        </div>
+        <div class="uk-modal-body" uk-overflow-auto>
+            {{!-- {{#each}} --}}
+                <ul class="uk-comment-list">
+                    <li>
+                        <article class="uk-comment uk-visible-toggle">
+                            <header class="uk-comment-header uk-position-relative">
+                                <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                    <div class="uk-width-expand">
+                                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Dohyunwoo</a></h4>
+                                        <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">1 days ago</a></p>
+                                    </div>
+                                </div>
+                                <div class="uk-position-top-right uk-position-small"><a class="uk-link-muted" href="#">Reply</a></div>
+                            </header>
+                            <div class="uk-comment-body">
+                                <p>What is the meaning of the 9ple name?</p>
+                            </div>
+                        </article>
+                        {{!-- {{#with}} --}}
+                            <ul>
+                                <li>
+                                    <article class="uk-comment uk-comment-primary uk-visible-toggle">
+                                        <header class="uk-comment-header uk-position-relative">
+                                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-comment-avatar" src="/images/9ple BI_0607.png" width="80" height="80" alt="9ple logo">
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">9ple Admin</a></h4>
+                                                    <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">12 days ago</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="uk-position-top-right uk-position-small"><a class="uk-link-muted" href="#">Reply</a></div>
+                                        </header>
+                                        <div class="uk-comment-body">
+                                            <p>just 9ple^^</p>
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                        {{!-- {{/with}} --}}
+                    </li>
+                </ul>
+            {{!-- {{/each}} --}}
+            {{!-- {{#if}} --}}
+                <form class="uk-form-stacked">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">Send to Customer</label>
+                        <div class="uk-form-controls">
+                            <textarea class="uk-textarea" rows="4"></textarea>
+                        </div>
+                        <div class="uk-margin uk-text-right">
+                            <button class="uk-button uk-button-default">SEND</button>
+                        </div>
+                    </div>
+                </form>
+            {{!-- {{/if}} --}}
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-primary uk-modal-close" type="button">OK</button>
+        </div>
+    </div>
+</div>
